@@ -107,13 +107,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="FUg-cS-WwS">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black (iOS)"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5yK-Ii-FkP" secondAttribute="bottom" id="GDg-bz-0LH"/>
+                            <constraint firstItem="FUg-cS-WwS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WKT-57-40R"/>
                             <constraint firstItem="5yK-Ii-FkP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cC4-hO-wSd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5yK-Ii-FkP" secondAttribute="trailing" constant="20" id="cdO-rj-Iqx"/>
+                            <constraint firstItem="FUg-cS-WwS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g9q-cH-69h"/>
                             <constraint firstItem="HiC-1A-dCc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="gzA-Ye-tn0"/>
                             <constraint firstItem="5yK-Ii-FkP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="yKx-ut-bUv"/>
                         </constraints>
@@ -124,6 +129,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="FUg-cS-WwS" id="hBS-YC-N1z"/>
                         <outlet property="counterLabel" destination="fKX-fs-Vxj" id="Atz-jS-1Gw"/>
                         <outlet property="imageView" destination="pa8-d7-9eh" id="51N-Iw-Veh"/>
                         <outlet property="noButton" destination="9a9-2v-dWw" id="x2t-tb-N2d"/>
