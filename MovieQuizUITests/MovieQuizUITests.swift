@@ -24,7 +24,7 @@ final class MovieQuizUITests: XCTestCase {
     }
     
     func testYesButton() {
-        sleep(20)
+        sleep(5)
         
         let firstPoster = app.images["Poster"]
         let firstPosterData = firstPoster.screenshot().pngRepresentation
@@ -38,8 +38,7 @@ final class MovieQuizUITests: XCTestCase {
         let indexLabel = app.staticTexts["Index"]
        
         XCTAssertNotEqual(firstPosterData, secondPosterData)
-        XCTAssertEqual(indexLabel.label, "1/10")
-        print(indexLabel)
+        XCTAssertEqual(indexLabel.label, "2/10")
     }
     
     func testNoButton() {
