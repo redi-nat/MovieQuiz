@@ -50,11 +50,18 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     func show(quiz step: QuizStepViewModel) {
         DispatchQueue.main.async { [weak self] in
             self?.imageView.layer.borderColor = UIColor.clear.cgColor
-            self?.imageView.image = step.image
+            
+            if let imageData = step.imageData, let image = UIImage(data: imageData) {
+                self?.imageView.image = image
+            } else {
+                self?.imageView.image = nil
+            }
+            
             self?.textLabel.text = step.question
             self?.counterLabel.text = step.questionNumber
         }
     }
+
     
     func show(quiz result: QuizResultsViewModel) {
         DispatchQueue.main.async { [weak self] in
