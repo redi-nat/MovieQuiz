@@ -25,6 +25,8 @@ final class MovieQuizViewController: UIViewController, MovieQuizViewControllerPr
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = MovieQuizPresenter(viewController: self)
+        imageView.layer.cornerRadius = 20
         showLoadingIndicator()
         setupUI()
     }

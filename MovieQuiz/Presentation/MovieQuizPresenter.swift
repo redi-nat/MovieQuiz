@@ -5,7 +5,7 @@ final class MovieQuizPresenter: QuestionFactoryDelegate {
     // MARK: - Properties
     
     let questionsAmount: Int = 10
-    var currentQuestionIndex: Int = 1
+    var currentQuestionIndex: Int = 0
     var correctAnswers: Int = 0
     var currentQuestion: QuizQuestion?
     
